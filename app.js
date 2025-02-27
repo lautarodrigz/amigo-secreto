@@ -2,9 +2,11 @@
 let amigos = [];
 
 function agregarAmigo() {
-    let nuevoAmigo = document.querySelector("#amigo").value;
+    let entrada = document.querySelector("#amigo");
+    let nuevoAmigo = entrada.value;
     if (nuevoAmigo !== "") {
         amigos.push(nuevoAmigo);
+        entrada.value = "";
     } else {
         alert("Por favor, inserte un nombre");
     }
